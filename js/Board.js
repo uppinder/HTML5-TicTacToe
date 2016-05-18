@@ -1,6 +1,6 @@
 function Board(boardData) {
 	
-	//declare all class properties
+	//Declare all class properties
 	this.canvas      = boardData.canvas;
 	this.context     = boardData.context;
 	this.width       = boardData.width;
@@ -45,5 +45,34 @@ function Board(boardData) {
 			this.cell[i].push(cell);
 		}
 	}
-	
+}
+
+Board.prototype.drawBoard = function() {
+		
+		var lineStart            = 4;
+		var lineLength           = this.width - 5;
+		this.context.lineWidth   = lineWidth;
+		this.context.lineCap     = 'round';
+		this.context.strokeStyle = "#ddd";
+		
+		context.beginPath();
+
+		/*
+		* 	Horizontal lines 
+		*/
+		for (var j = 1;j <= 2; ++j) {  
+			this.context.moveTo(lineStart, j * this.cellHeight);
+			this.context.lineTo(lineLength, j * this.cellHeight);
+		}
+
+		/*
+		* 	Vertical lines 
+		*/
+		for (var i = 1;i <= 2; ++i) {
+			this.context.moveTo(i * this.cellWidth, lineStart);
+			this.context.lineTo(i * this.cellWidth, lineLength);
+		}
+
+		context.stroke();
+
 }
