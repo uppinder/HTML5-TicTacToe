@@ -71,16 +71,16 @@ Cell.prototype.drawO = function() {
 	}	
 }
 
+Cell.prototype.clearCell = function() {
 
-
-
-
-
-
-
-
-
-
-
-
-
+	this.context.fillStyle = "#fff";
+	this.context.fillRect(
+		XCoordinate,
+		YCoordinate,
+		this.width,
+		this.height
+	);
+	
+	this.empty  = true;
+	this.symbol = "";
+}
