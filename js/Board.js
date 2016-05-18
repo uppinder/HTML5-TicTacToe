@@ -48,31 +48,3 @@ function Board(boardData) {
 	
 }
 
-// function drawLines (lineWidth, strokeStyle) {
-// 			  var lineStart = 4;
-// 			  var lineLength = canvasSize - 5;
-// 			  context.lineWidth = lineWidth;
-// 			  context.lineCap = 'round';
-// 			  context.strokeStyle = strokeStyle;
-// 			  context.beginPath();
-
-// 			  /*
-// 			   * Horizontal lines 
-// 			   */
-// 			  for (var y = 1;y <= 2;y++) {  
-// 			    context.moveTo(lineStart, y * sectionSize);
-// 			    context.lineTo(lineLength, y * sectionSize);
-// 			  }
-
-// 			  /*
-// 			   * Vertical lines 
-// 			   */
-// 			  for (var x = 1;x <= 2;x++) {
-// 			    context.moveTo(x * sectionSize, lineStart);
-// 			    context.lineTo(x * sectionSize, lineLength);
-// 			  }
-
-// 			  context.stroke();
-// 	}
-
-// 	drawLines(10, lineColor);
