@@ -18,10 +18,10 @@ function Board(boardData) {
 	this.cellObjects = [];
 
 	this.winningCombinations =  [
-								[{x:0,y:0},{x:1,y:0},{x:2,y:0}],[{x:0,y:1},{x:1,y:1},{x:2,y:1}],[{x:0,y:2},{x:1,y:2},{x:2,y:2}],
-								[{x:0,y:0},{x:0,y:1},{x:0,y:2}],[{x:1,y:0},{x:1,y:1},{x:1,y:2}],[{x:2,y:0},{x:2,y:1},{x:2,y:2}],
-								[{x:0,y:0},{x:1,y:1},{x:2,y:2}],[{x:0,y:2},{x:1,y:1},{x:2,y:0}]
-							   ];
+				      [{x:0,y:0},{x:1,y:0},{x:2,y:0}],[{x:0,y:1},{x:1,y:1},{x:2,y:1}],[{x:0,y:2},{x:1,y:2},{x:2,y:2}],
+				      [{x:0,y:0},{x:0,y:1},{x:0,y:2}],[{x:1,y:0},{x:1,y:1},{x:1,y:2}],[{x:2,y:0},{x:2,y:1},{x:2,y:2}],
+				      [{x:0,y:0},{x:1,y:1},{x:2,y:2}],[{x:0,y:2},{x:1,y:1},{x:2,y:0}]
+				    ];
 	/*
 		Create 9 cell objects.
 	 */
@@ -54,11 +54,9 @@ function Board(boardData) {
 }
 
 Board.prototype.isInBounds = function(coordinates) {
-		// console.log(coordinates.mouseX);
-		// console.log(coordinates.mouseY);
-		// console.log(coordinates.width);
+	
 	return (coordinates.mouseX > 0 && coordinates.mouseX < coordinates.width) &&
-		   (coordinates.mouseY > 0 && coordinates.mouseY < coordinates.height);
+	       (coordinates.mouseY > 0 && coordinates.mouseY < coordinates.height);
 }
 
 Board.prototype.getCell = function(c) {
@@ -74,8 +72,8 @@ Board.prototype.getCell = function(c) {
 Board.prototype.isWinCombination = function(combo,gameBoard) {
 
 	return (gameBoard.cellObjects[combo[0].x][combo[0].y].symbol === gameBoard.cellObjects[combo[1].x][combo[1].y].symbol ) &&
-		   (gameBoard.cellObjects[combo[1].x][combo[1].y].symbol === gameBoard.cellObjects[combo[2].x][combo[2].y].symbol ) &&
-           (gameBoard.cellObjects[combo[0].x][combo[0].y].symbol !== "" )
+	       (gameBoard.cellObjects[combo[1].x][combo[1].y].symbol === gameBoard.cellObjects[combo[2].x][combo[2].y].symbol ) &&
+               (gameBoard.cellObjects[combo[0].x][combo[0].y].symbol !== "" )
 
 }
 
