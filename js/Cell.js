@@ -31,11 +31,11 @@ Cell.prototype.drawX = function() {
 		var offset = 50;
 		// Draw '\' 
 		this.context.moveTo(this.XCoordinate + offset,this.YCoordinate + offset);
-		this.context.lintTo(this.XCoordinate + this.width - offset,this.YCoordinate + this.width - offset);
+		this.context.lineTo(this.XCoordinate + this.width - offset,this.YCoordinate + this.width - offset);
 
 		// Draw '/'
 		this.context.moveTo(this.XCoordinate + offset,this.YCoordinate + this.width - offset);
-		this.context.lintTo(this.XCoordinate + this.width - offset,this.YCoordinate + offset);
+		this.context.lineTo(this.XCoordinate + this.width - offset,this.YCoordinate + offset);
 		
 		this.context.stroke();
 
